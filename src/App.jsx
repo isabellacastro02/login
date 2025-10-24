@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
@@ -8,24 +6,46 @@ function App() {
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <header>
+      <div className="login-container">
       <h1>LOGIN</h1>
-      <p LOGAR COM></p>
-      </header>
-      <input 
-            type="text"
-            placeholder="Digite o nome do usuário.."
-            />
-            <button>ENTRAR</button>
-      
+
+      <form>
+        <label htmlFor="usuario">USUÁRIO:</label>
+        <input type="text" id="usuario" placeholder="Digite seu usuário" required />
+
+        <label htmlFor="senha">SENHA:</label>
+        <input type="password" id="senha" placeholder="Digite sua senha" required />
+
+        <div className="opcoes">
+          <label>
+            <input type="checkbox" /> Manter conectado
+          </label>
+          <a href="#">esqueceu a senha?</a>
+        </div>
+
+        <button type="submit">ENTRAR</button>
+
+        <p>LOGAR COM</p>
+        <div className="social">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/733/733547.png"
+            alt="Facebook"
+          />
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/281/281764.png"
+            alt="Google"
+          />
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/179/179309.png"
+            alt="Apple"
+          />
+        </div>
+
+        <p className="cadastro">
+          NÃO TEM CONTA? <a href="#">Inscrever-se</a>
+        </p>
+      </form>
+    </div>
     </>
   )
 }
