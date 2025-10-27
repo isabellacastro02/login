@@ -8,7 +8,7 @@ body {
 }
 
 .login-container {
-  background-color: #d9d9d9;
+  background-color: #d9d9d9e4;
   padding: 30px 40px;
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
@@ -41,7 +41,6 @@ input[type="password"] {
 .opcoes {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   margin: 10px 0;
   font-size: 14px;
 }
@@ -52,7 +51,7 @@ input[type="password"] {
 }
 
 button {
-  width: 100%;
+  width: 80%;
   background-color: #555;
   color: white;
   font-weight: bold;
@@ -60,7 +59,6 @@ button {
   border-radius: 10px;
   padding: 10px;
   margin-top: 10px;
-  cursor: pointer;
 }
 
 button:hover {
@@ -69,7 +67,7 @@ button:hover {
 
 p {
   font-weight: bold;
-  margin-top: 15px;
+  margin-top: 25px;
 }
 
 .social {
@@ -80,9 +78,8 @@ p {
 }
 
 .social img {
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
+  width: 15%;
+  height: 6vh;
 }
 
 .cadastro {
@@ -94,8 +91,4 @@ p {
 .cadastro a {
   color: #3366cc;
   text-decoration: none;
-}
-
-.cadastro a:hover {
-  text-decoration: underline;
 }

@@ -1,5 +1,8 @@
 import { useState } from 'react'
 import './App.css'
+import Facebook from './assets/Facebook-logo.png'
+import Google from './assets/Google-logo.png'
+import Apple from './assets/Apple-Logo.png'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -9,17 +12,15 @@ function App() {
       <div className="login-container">
       <h1>LOGIN</h1>
 
-      <form>
-        <label htmlFor="usuario">USUÁRIO:</label>
-        <input type="text" id="usuario" placeholder="Digite seu usuário" required />
+        <label for="usuario">USUÁRIO</label>
+        <input type="text" placeholder="Digite seu usuário" required />
 
-        <label htmlFor="senha">SENHA:</label>
-        <input type="password" id="senha" placeholder="Digite sua senha" required />
+        <label for="senha">SENHA</label>
+        <input type="password" placeholder="Digite sua senha" required />
 
         <div className="opcoes">
-          <label>
+          
             <input type="checkbox" /> Manter conectado
-          </label>
           <a href="#">esqueceu a senha?</a>
         </div>
 
@@ -27,24 +28,18 @@ function App() {
 
         <p>LOGAR COM</p>
         <div className="social">
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/733/733547.png"
-            alt="Facebook"
-          />
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/281/281764.png"
-            alt="Google"
-          />
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/179/179309.png"
-            alt="Apple"
-          />
+           
+          <img src={Facebook} alt="" className="facebook" />
+          
+          <img src={Google} alt="" className="google" />
+        
+          <img src={Apple} alt="" className="apple" />
         </div>
 
         <p className="cadastro">
           NÃO TEM CONTA? <a href="#">Inscrever-se</a>
         </p>
-      </form>
+      
     </div>
     </>
   )
