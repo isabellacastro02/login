@@ -1,8 +1,11 @@
 import { useState } from 'react'
 import './App.css'
-import Facebook from './assets/Facebook-logo.png'
+import Facebook from './assets/Facebook-icon.png'
 import Google from './assets/Google-logo.png'
-import Apple from './assets/Apple-Logo.png'
+import Apple from './assets/Apple-logo.png'
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import Cadastro from './Cadastro'
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -13,10 +16,10 @@ function App() {
       <h1>LOGIN</h1>
 
         <label for="usuario">USUÁRIO</label>
-        <input type="text" placeholder="Digite seu usuário" required />
+        <input type="text" placeholder="Digite seu usuário" />
 
         <label for="senha">SENHA</label>
-        <input type="password" placeholder="Digite sua senha" required />
+        <input type="password" placeholder="Digite sua senha" />
 
         <div className="opcoes">
           
@@ -36,9 +39,8 @@ function App() {
           <img src={Apple} alt="" className="apple" />
         </div>
 
-        <p className="cadastro">
-          NÃO TEM CONTA? <a href="#">Inscrever-se</a>
-        </p>
+        <p className="cadastro"> NÃO TEM CONTA?
+           <Link to="/cadastro">Inscrever-se</Link> </p>
       
     </div>
     </>
